@@ -3,15 +3,25 @@ package trainerapp;
 public class TrainerMain {
     public static void main(String[] args) {
         Trainer trainer = new Trainer();
-        trainer.name = "John Doe";
-        trainer.yearOfBirth = 1980;
-        System.out.println(trainer.name);
-        System.out.println(trainer.yearOfBirth);
+        trainer.setName("John Doe");
+        trainer.setYearOfBirth(1980);
+        System.out.println(trainer.getName());
+        System.out.println(trainer.getYearOfBirth());
 
         Trainer anotherTrainer = new Trainer();
-        anotherTrainer.name = "Jane Doe";
-        anotherTrainer.yearOfBirth = 1981;
-        System.out.println(anotherTrainer.name);
-        System.out.println(anotherTrainer.yearOfBirth);
+        anotherTrainer.setName("Jane Doe");
+        anotherTrainer.setYearOfBirth(1981);
+        System.out.println(anotherTrainer.getName());
+        System.out.println(anotherTrainer.getYearOfBirth());
+
+        System.out.println(anotherTrainer.getName());
+        System.out.println(anotherTrainer.getNameAndYearOfBirth());
+
+        anotherTrainer.changeName("Joe Doe");
+        System.out.println(anotherTrainer.getName());
+
+        anotherTrainer.setName("Jacky Doe");
+        System.out.println(anotherTrainer.getName());
+
     }
 }
