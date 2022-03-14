@@ -1,3 +1,5 @@
+
+
 package statements;
 
 public class Investment {
@@ -17,12 +19,16 @@ public class Investment {
         return fund;
     }
 
+    /*
+    Hozam = tőke* kamat/ 100 * napok száma, és az egész számláló osztva 365-tel. Egyszerűsítés után:
+     */
+
     public double getYield(int days){
         return fund * interestRate * days / (100.0 *365);
     }
 
     public double close(int days){
-        double amount = (getFund() + getYield(days)) * (1-cost/100);
+        double amount = (getFund() + getYield(days)) * (1 - cost/100);
         double payout = active ? amount : 0;
         active = false;
         return payout;
@@ -30,3 +36,7 @@ public class Investment {
     }
 
 }
+
+
+
+
